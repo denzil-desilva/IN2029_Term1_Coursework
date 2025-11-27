@@ -7,24 +7,13 @@ using namespace std;
 
 int main() {
 
-	ifstream input;
-
-	input.open("grades.txt");
+	ifstream input("requests.txt");
 
 	string x;
-	string y;
-	string z;
-	string a;
-	string b;
 
-	while (input >> x >> y >> z >> a >> b) {
-
-		cout << x << " " << y << " " << z << " " << a << " " << b << "\n";
-
+	while (input >> x) {
+		cout << x <<"\n";
 	}
-
-	input.close();
-
 
 	return 0;
 
