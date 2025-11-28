@@ -9,6 +9,8 @@ class module {
 	int credits;
 
 public:
+	
+	//module();
 
 	module(const std::string &code, const std::string &name, const int &creds);
 

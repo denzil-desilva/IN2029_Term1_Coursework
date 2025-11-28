@@ -4,9 +4,57 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <map>
 
 using namespace std;
+
+void readModules(map<string, module> &moduleRecord) {
+
+	ifstream input("modules.txt");
+
+	string a;
+	int b;
+	string c;
+
+	while (input >> a >> b >> c) {
+		moduleRecord.insert({ a, module(a, c, b) });
+	}
+}
+
+void readStudents(map<int, student>& studentRecord, map<string, module> &moduleRecord) {
+
+	ifstream file_line("grades.txt");
+
+	string x;
+
+	int sumGrades;
+	int sumCredits;
+
+	while (getline(file_line, x)) {
+
+		istringstream record(x);
+
+		int studentId;
+		int termCode;
+		string moduleCode;
+		int grade;
+
+		while (record >> studentId >> termCode >> moduleCode >> grade) {
+
+			sumGrades += grade;
+			sumCredits += moduleRecord.at(moduleCode).getCredits();
+			
+			studentRecord.insert({ studentId, student(studentId) });
+
+			studentRecord.at(studentId).addGrades(termCode, termGrades(termCode, moduleCode, grade));
+		}
+
+
+	}
+
+	
+}
 
 
 int main() {
@@ -15,20 +63,14 @@ int main() {
 
 	map<int, student> studentRecord;
 
-	ifstream input("modules.txt");
+	
+	//readModules(moduleRecord);
 
-	string x;
-	string a;
-	string b;
-	string c;
+	readStudents(studentRecord);
+	
 
-	//<< " " << a << " " << b << " " << c
+	studentRecord.at(20231234).getTermGrades(251);
 
-	while (input >> a >> b >> c) {
-		moduleRecord.insert({a, module(a, c, stoi(b))});
-
-		cout << moduleRecord.empty();
-	}
 
 	return 0;
 

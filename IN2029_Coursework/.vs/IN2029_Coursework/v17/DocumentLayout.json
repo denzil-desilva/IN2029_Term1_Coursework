@@ -7,16 +7,12 @@
       "RelativeMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|solutionrelative:IN2029_Coursework\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\module.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|solutionrelative:IN2029_Coursework\\module.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\termGrades.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|solutionrelative:IN2029_Coursework\\termGrades.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\module.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|solutionrelative:IN2029_Coursework\\module.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\modules.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|solutionrelative:IN2029_Coursework\\modules.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\termGrades.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4F66E31D-5C08-48BB-9FF0-AFB9F983E05D}|IN2029_Coursework\\IN2029_Coursework.vcxproj|solutionrelative:IN2029_Coursework\\termGrades.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,40 +27,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "module.h",
-              "DocumentMoniker": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\module.h",
-              "RelativeDocumentMoniker": "IN2029_Coursework\\module.h",
-              "ToolTip": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\module.h",
-              "RelativeToolTip": "IN2029_Coursework\\module.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA0AAAAAAAAAA==",
+              "Title": "termGrades.h",
+              "DocumentMoniker": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\termGrades.h",
+              "RelativeDocumentMoniker": "IN2029_Coursework\\termGrades.h",
+              "ToolTip": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\termGrades.h",
+              "RelativeToolTip": "IN2029_Coursework\\termGrades.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-28T00:16:03.985Z",
+              "WhenOpened": "2025-11-28T14:57:45.9Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "modules.txt",
-              "DocumentMoniker": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\modules.txt",
-              "RelativeDocumentMoniker": "IN2029_Coursework\\modules.txt",
-              "ToolTip": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\modules.txt",
-              "RelativeToolTip": "IN2029_Coursework\\modules.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-28T00:03:05.971Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "module.cpp",
-              "DocumentMoniker": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\module.cpp",
-              "RelativeDocumentMoniker": "IN2029_Coursework\\module.cpp",
-              "ToolTip": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\module.cpp",
-              "RelativeToolTip": "IN2029_Coursework\\module.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Title": "termGrades.cpp",
+              "DocumentMoniker": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\termGrades.cpp",
+              "RelativeDocumentMoniker": "IN2029_Coursework\\termGrades.cpp",
+              "ToolTip": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\termGrades.cpp",
+              "RelativeToolTip": "IN2029_Coursework\\termGrades.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-27T23:47:01.028Z",
+              "WhenOpened": "2025-11-28T14:15:27.806Z",
               "EditorCaption": ""
             },
             {
@@ -75,14 +62,10 @@
               "RelativeDocumentMoniker": "IN2029_Coursework\\main.cpp",
               "ToolTip": "C:\\Users\\denzi\\Documents\\GitHub\\IN2029_Term1_Coursework\\IN2029_Coursework\\IN2029_Coursework\\main.cpp",
               "RelativeToolTip": "IN2029_Coursework\\main.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-27T23:03:24.255Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         }

@@ -16,6 +16,8 @@ public:
 	void addGrade(const std::string& modCode, const int &grade);
 
 	//void addModule(const module& module);
+
+	int getTermAverage() const;
 };
 
 #endif

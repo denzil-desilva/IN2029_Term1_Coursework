@@ -17,6 +17,10 @@ public:
 	const int& getId() { return studentId; }
 
 	void addGrades(const int& term, const termGrades& termGrad);
+
+	const termGrades& getTermGrades(const int& termCode) {
+		return termGradesRecord.at(termCode);
+	}
 		
 };
 
