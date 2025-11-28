@@ -9,17 +9,15 @@ class module {
 	int credits;
 
 public:
-	std::string displayModuleInfo() {
-		return "null";
-	}
 
-	int getCredits() {
-		return 0;
-	}
+	module(const std::string &code, const std::string &name, const int &creds);
 
-	std::string getModuleCode() {
-		return "null";
-	}
+	std::string displayModuleInfo() const;
+
+	int getCredits() const { return credits; };
+
+	std::string getModuleCode() const { return moduleCode; };
+
 };
 
 #endif 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -124,7 +124,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="module.cpp" />
     <ClCompile Include="student.cpp" />
+    <ClCompile Include="termGrades.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="grades.txt" />
@@ -132,7 +134,9 @@
     <Text Include="requests.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="module.h" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="termGrades.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

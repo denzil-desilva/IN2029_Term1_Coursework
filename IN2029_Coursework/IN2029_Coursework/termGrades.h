@@ -3,19 +3,19 @@
 
 #include "module.h"
 #include <map>
+#include <string>
 
 class termGrades {
 	int termCode;
-	std::map<module, int> grades;
+	std::map<std::string, int> grades;
 
 public:
-	void addGrade(const module &module, const int &grade) {
-		NULL;
-	}
 
-	void addModule(const module& module) {
-		NULL;
-	}
+	termGrades(const int &code, const std::string &modCode, const int &grade);
+
+	void addGrade(const std::string& modCode, const int &grade);
+
+	//void addModule(const module& module);
 };
 
 #endif
