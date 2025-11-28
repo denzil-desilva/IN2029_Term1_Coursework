@@ -24,7 +24,7 @@
     <ClCompile Include="module.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="termGrades.cpp">
+    <ClCompile Include="termMarks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -46,7 +46,7 @@
     <ClInclude Include="module.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="termGrades.h">
+    <ClInclude Include="termMarks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

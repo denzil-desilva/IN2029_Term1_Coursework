@@ -126,7 +126,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="module.cpp" />
     <ClCompile Include="student.cpp" />
-    <ClCompile Include="termGrades.cpp" />
+    <ClCompile Include="termMarks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="grades.txt" />
@@ -136,7 +136,7 @@
   <ItemGroup>
     <ClInclude Include="module.h" />
     <ClInclude Include="student.h" />
-    <ClInclude Include="termGrades.h" />
+    <ClInclude Include="termMarks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

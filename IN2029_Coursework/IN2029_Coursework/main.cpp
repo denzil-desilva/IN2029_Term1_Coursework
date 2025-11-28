@@ -1,6 +1,6 @@
 #include "student.h"
 #include "module.h"
-#include "termGrades.h"
+#include "termMarks.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -24,12 +24,9 @@ void readModules(map<string, module> &moduleRecord) {
 
 void readStudents(map<int, student>& studentRecord, map<string, module> &moduleRecord) {
 
-	ifstream file_line("grades.txt");
+	ifstream file_line("marks.txt");
 
 	string x;
-
-	int sumGrades;
-	int sumCredits;
 
 	while (getline(file_line, x)) {
 
@@ -38,16 +35,17 @@ void readStudents(map<int, student>& studentRecord, map<string, module> &moduleR
 		int studentId;
 		int termCode;
 		string moduleCode;
-		int grade;
+		int mark;
 
-		while (record >> studentId >> termCode >> moduleCode >> grade) {
+		while (record >> studentId >> termCode >> moduleCode >> mark) {
 
-			sumGrades += grade;
-			sumCredits += moduleRecord.at(moduleCode).getCredits();
+			if (studentRecord.find(studentId) != studentRecord.cend()) {
+				studentRecord.insert({ studentId, student(studentId) });
+				studentRecord.at(studentId).addMarks(termCode, termMarks(termCode));
+			}
 			
-			studentRecord.insert({ studentId, student(studentId) });
-
-			studentRecord.at(studentId).addGrades(termCode, termGrades(termCode, moduleCode, grade));
+			studentRecord.at(studentId).getTermMarks(termCode).addMark(moduleCode, mark, moduleRecord.at(moduleCode).getCredits());
+			
 		}
 
 
@@ -66,10 +64,10 @@ int main() {
 	
 	//readModules(moduleRecord);
 
-	readStudents(studentRecord);
+	readStudents(studentRecord, moduleRecord);
 	
 
-	studentRecord.at(20231234).getTermGrades(251);
+	studentRecord.at(20231234).getTermMarks(251);
 
 
 	return 0;

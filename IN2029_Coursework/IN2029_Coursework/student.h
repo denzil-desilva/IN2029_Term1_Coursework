@@ -1,14 +1,14 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include "termGrades.h"
+#include "termMarks.h"
 #include <map>
 #include <vector>
 
 
 class student {
 	int studentId;
-	std::map<int, termGrades> termGradesRecord;
+	std::map<int, termMarks> termMarksRecord;
 
 public:
 
@@ -16,12 +16,14 @@ public:
 
 	const int& getId() { return studentId; }
 
-	void addGrades(const int& term, const termGrades& termGrad);
+	void addMarks(const int& term, const termMarks& termMark);
 
-	const termGrades& getTermGrades(const int& termCode) {
-		return termGradesRecord.at(termCode);
+	std::vector<int>& getOverallTermSums() const;
+
+	termMarks& getTermMarks(const int& termCode) {
+		return termMarksRecord.at(termCode);
 	}
-		
+
 };
 
 
