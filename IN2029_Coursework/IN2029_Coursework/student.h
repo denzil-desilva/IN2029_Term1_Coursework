@@ -18,7 +18,7 @@ public:
 
 	void addMarks(const int& term, const termMarks& termMark);
 
-	std::vector<int>& getOverallTermSums() const;
+	std::vector<int>& getAllTermSums() const;
 
 	termMarks& getTermMarks(const int& termCode) {
 		return termMarksRecord.at(termCode);

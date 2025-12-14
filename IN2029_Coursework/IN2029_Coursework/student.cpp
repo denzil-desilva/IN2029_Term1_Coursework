@@ -12,7 +12,7 @@ void student::addMarks(const int& term, const termMarks& termMark) {
 	termMarksRecord.insert({ term, termMark });
 }
 
-vector<int>& student::getOverallTermSums() const{
+vector<int>& student::getAllTermSums() const{
 
 	vector<int> sums = { 0, 0 };
 

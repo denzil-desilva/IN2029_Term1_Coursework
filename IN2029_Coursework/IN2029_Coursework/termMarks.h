@@ -1,7 +1,7 @@
 #ifndef TERMMARKS_H
 #define TERMMARKS_H
 
-#include "student.h"
+#include "module.h"
 #include <map>
 #include <string>
 
@@ -16,6 +16,8 @@ public:
 
 	termMarks(const int &code);
 
+	int getTermCode() { return termCode; };
+
 	void addMark(const std::string& modCode, const int &mark, const int &credits);
 
 	int getTermAverage() const;
@@ -24,12 +26,15 @@ public:
 
 	int getCreditsSum() const{ return creditsSum; };
 
+	void displayTermReport(std::map<std::string, module>& moduleRecord);
+
+
 private:
 
 	void updateSums(const int& mark, const int& credits);
 };
 
-double getOverallAverage(const student &student);
+//double getOverallAverage(const student& student);
 
 #endif
 

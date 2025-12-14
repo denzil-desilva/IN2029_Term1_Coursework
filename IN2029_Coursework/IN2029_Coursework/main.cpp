@@ -24,7 +24,7 @@ void readModules(map<string, module> &moduleRecord) {
 
 void readStudents(map<int, student>& studentRecord, map<string, module> &moduleRecord) {
 
-	ifstream file_line("marks.txt");
+	ifstream file_line("grades.txt");
 
 	string x;
 
@@ -40,8 +40,10 @@ void readStudents(map<int, student>& studentRecord, map<string, module> &moduleR
 		while (record >> studentId >> termCode >> moduleCode >> mark) {
 
 			if (studentRecord.find(studentId) != studentRecord.cend()) {
-				studentRecord.insert({ studentId, student(studentId) });
-				studentRecord.at(studentId).addMarks(termCode, termMarks(termCode));
+				student newStudent(studentId);
+				newStudent.addMarks(termCode, termMarks(termCode));
+
+				studentRecord.insert({ studentId, newStudent});
 			}
 			
 			studentRecord.at(studentId).getTermMarks(termCode).addMark(moduleCode, mark, moduleRecord.at(moduleCode).getCredits());
@@ -64,10 +66,10 @@ int main() {
 	
 	//readModules(moduleRecord);
 
-	readStudents(studentRecord, moduleRecord);
-	
+	//readStudents(studentRecord, moduleRecord);
+	//
 
-	studentRecord.at(20231234).getTermMarks(251);
+	//studentRecord.at(20231234);
 
 
 	return 0;

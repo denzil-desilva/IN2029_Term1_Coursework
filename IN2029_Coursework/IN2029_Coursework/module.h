@@ -14,7 +14,7 @@ public:
 
 	module(const std::string &code, const std::string &name, const int &creds);
 
-	std::string displayModuleInfo() const;
+	std::string getModuleInfo() const;
 
 	int getCredits() const { return credits; };
 
