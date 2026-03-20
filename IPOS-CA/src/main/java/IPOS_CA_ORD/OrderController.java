@@ -7,40 +7,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import static IPOS_CA_ORD.DraftOrderController.orderInFocus;
 
 public class OrderController implements Initializable {
 
-    @FXML
-    private Button loginButton;
-
-    @FXML
-    private Button createDraftOrder;
-
-    @FXML
-    private Button continueWithOrder;
-
-    @FXML
-    private TableView<Order> draftOrderTable = new TableView<>();
-    @FXML
-    private TableColumn<Order, Integer> ordID = new TableColumn<>("OrderID");
-    @FXML
-    private TableColumn<Order, LocalDateTime> dateAndTime = new TableColumn<>("DateAndTime");
-    @FXML
-    private TableColumn<Order, Integer> noOfProducts = new TableColumn<>("NoOfProducts");
-    @FXML
-    private TableColumn<Order, Double> total = new TableColumn<>("OrderTotal");
+    static OrderController orderController;
 
     @FXML
     private TableView<Product> productTable = new TableView<>();
@@ -57,116 +40,54 @@ public class OrderController implements Initializable {
     @FXML
     private TableColumn<Product, Integer> quantityRequired = new TableColumn<>();
 
-    private Order orderInFocus;
-
-    private static final ArrayList<Order> draftOrders = new ArrayList<>();
+    @FXML
+    private Button addProduct;
 
     @FXML
-    protected void onLoginButtonClick(ActionEvent event) throws IOException {
-        Stage stage;
-        Parent fxmlLoader;
+    private Label orderTotal = new Label();
 
-        stage = (Stage) loginButton.getScene().getWindow();
-        fxmlLoader = FXMLLoader.load(IPOS_CA.class.getResource("draftOrderPage.fxml"));
-
-        Scene scene = new Scene(fxmlLoader, 920, 670);
-        stage.setTitle("Draft orders");
-        stage.setScene(scene);
-        stage.show();
-
-//        setUpDraftOrderTable();
-//
-
-//
-//        System.out.println(ord.getOrderID());
-//
-//        populateDraftOrderTable();
-
-    }
-
-    @FXML
-    protected void onDraftOrderClick(ActionEvent event) throws IOException {
-
-        if (event.getSource() == createDraftOrder){
-            Order ord = new Order();
-            orderInFocus = ord;
-            OrderController.draftOrders.add(ord);
-
-        }
-
-        Stage stage;
-        Parent fxmlLoader;
-
-        stage = (Stage) createDraftOrder.getScene().getWindow();
-        fxmlLoader = FXMLLoader.load(IPOS_CA.class.getResource("mainOrderPage.fxml"));
-
-        Scene scene = new Scene(fxmlLoader, 920, 670);
-        stage.setTitle("Order portal");
-        stage.setScene(scene);
-        stage.show();
-
-        setUpProductTable();
-
-    }
-
-    @FXML
-    protected void onMouseClickedOnOrderList(MouseEvent event) throws IOException {
-
-        orderInFocus = draftOrderTable.getSelectionModel().getSelectedItem();
-
-        if (orderInFocus != null){
-            this.continueWithOrder.setDisable(false);
-        }
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        ordID.setCellValueFactory(new PropertyValueFactory<Order, Integer>("orderID"));
-        dateAndTime.setCellValueFactory(new PropertyValueFactory<Order, LocalDateTime>("creationDateAndTime"));
-        noOfProducts.setCellValueFactory(new PropertyValueFactory<Order, Integer>("noOfProducts"));
-        total.setCellValueFactory(new PropertyValueFactory<Order, Double>("orderTotal"));
-
-        Order ord = new Order();
-        OrderController.draftOrders.add(ord);
-
-        populateDraftOrderTable();
-
-    }
-
-    protected void setUpDraftOrderTable(){
-
-        draftOrderTable.getColumns().add(ordID);
-        draftOrderTable.getColumns().add(dateAndTime);
-        draftOrderTable.getColumns().add(noOfProducts);
-        draftOrderTable.getColumns().add(total);
-
-
-
-    }
-
-    protected void populateDraftOrderTable(){
-        ObservableList<Order> orderList = FXCollections.observableArrayList();
-
-        orderList.addAll(draftOrders);
-
-        draftOrderTable.setItems(orderList);
-    }
-
-    protected void setUpProductTable(){
-        prodID.setCellValueFactory(new PropertyValueFactory<Product, Integer>("productID"));
+        orderController = this;
+        prodID.setCellValueFactory(new PropertyValueFactory<Product, Integer>("productId"));
         description.setCellValueFactory(new PropertyValueFactory<Product, String>("description"));
         packType.setCellValueFactory(new PropertyValueFactory<Product, String>("packageType"));
         unitsInPack.setCellValueFactory(new PropertyValueFactory<Product, Integer>("unitsInPack"));
         packCost.setCellValueFactory(new PropertyValueFactory<Product, Double>("packCost"));
         quantityRequired.setCellValueFactory(new PropertyValueFactory<Product, Integer>("quantityRequired"));
 
+        populateProductTable();
     }
 
     protected void populateProductTable(){
         ObservableList<Product> productList = FXCollections.observableArrayList();
         productList.addAll(orderInFocus.getOrderProducts());
         productTable.setItems(productList);
+        orderTotal.setText(Double.toString(orderInFocus.getOrderTotal()));
     }
 
+    @FXML
+    protected void onAddProductButton(ActionEvent event) throws IOException {
+
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(IPOS_CA.class.getResource("cataloguePage.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 920, 670);
+        stage.setTitle("Select product");
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
+    protected void onRemoveProductButton(ActionEvent event) throws IOException {
+
+        Product prod = productTable.getSelectionModel().getSelectedItem();
+
+        if (prod != null){
+            orderInFocus.removeProduct(prod);
+            populateProductTable();
+        }
+    }
 }

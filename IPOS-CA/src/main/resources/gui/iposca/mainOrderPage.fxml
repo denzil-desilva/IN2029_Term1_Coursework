@@ -14,14 +14,10 @@
    <children>
       <MenuBar layoutY="81.0" prefHeight="25.0" prefWidth="569.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
-          <Menu mnemonicParsing="false" text="Home">
+          <Menu mnemonicParsing="false" text="Home" />
+          <Menu mnemonicParsing="false" text="Navigation">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" text="Draft orders" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -39,13 +35,13 @@
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label layoutX="691.0" layoutY="636.0" text="200.00" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="176.0">
+      <Label fx:id="orderTotal" layoutX="691.0" layoutY="636.0" text="0" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="176.0">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Button layoutX="803.0" layoutY="277.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="35.0" prefWidth="97.0" text="Add Product" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="addProduct" layoutX="803.0" layoutY="277.0" mnemonicParsing="false" onAction="#onAddProductButton" prefHeight="35.0" prefWidth="97.0" text="Add Product" AnchorPane.rightAnchor="20.0" />
       <Button layoutX="483.0" layoutY="345.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Place Order" textFill="RED" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <Button layoutX="799.0" layoutY="367.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="106.0" text="Remove Product" AnchorPane.rightAnchor="15.0" />
+      <Button layoutX="799.0" layoutY="367.0" mnemonicParsing="false" onAction="#onRemoveProductButton" prefHeight="35.0" prefWidth="106.0" text="Remove Product" AnchorPane.rightAnchor="15.0" />
       <TableView fx:id="productTable" layoutX="14.0" layoutY="64.0" prefHeight="565.0" prefWidth="773.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="64.0">
         <columns>
             <TableColumn fx:id="prodID" prefWidth="87.0" text="Prod ID" />

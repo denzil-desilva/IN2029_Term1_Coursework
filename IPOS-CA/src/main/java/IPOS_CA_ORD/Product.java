@@ -23,7 +23,7 @@ public class Product {
         this.unitsInPack = unitsInPack;
         this.packCost = packCost;
         this.availability = availability;
-        this.quantityRequired = 0;
+        this.quantityRequired = 1;
     }
 
     public int getProductId() { return this.productId; }
@@ -38,4 +38,5 @@ public class Product {
     public void setQuantityRequired(int quantity){
         this.quantityRequired = quantity;
     }
+
 }

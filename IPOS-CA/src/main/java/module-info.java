@@ -3,6 +3,7 @@ module gui.iposca {
     requires javafx.fxml;
 
     requires com.dlsc.formsfx;
+    requires java.desktop;
 
     opens gui.iposca to javafx.fxml;
     exports gui.iposca;

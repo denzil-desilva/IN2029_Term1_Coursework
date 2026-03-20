@@ -5,15 +5,11 @@ import java.util.Hashtable;
 
 public class Catalogue {
 
-    private final Hashtable<Integer, Product> products = new Hashtable<>();
+    private ArrayList<Product> products = new ArrayList<>();
 
     public Catalogue(ArrayList<Product> productList) {
 
-        for (Product item : productList){
-            if (item != null) {
-                this.products.put(item.getProductId(), item);
-            }
-        }
+        this.products = productList;
     }
 
     public Product getProduct(int productID){

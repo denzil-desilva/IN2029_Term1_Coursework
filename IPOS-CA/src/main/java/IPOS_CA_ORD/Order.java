@@ -71,7 +71,10 @@ public class Order{
     public void removeProduct(Product product){
 
         int quantity = product.getQuantityRequired();
+
+        System.out.println(orderProducts.size());
         this.orderProducts.remove(product);
+        System.out.println(orderProducts.size());
 
 //      the value of one pack x the quantity provided
         double stockValue = product.getPackCost() * quantity;
